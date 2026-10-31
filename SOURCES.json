@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "https://github.com/blader/humanizer",
+    "commit": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+    "archive_url": "https://github.com/blader/humanizer/archive/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0.zip",
+    "archive_sha256": "3dd22eb2168514f05e66438911f66a8f1b391db9c9f035a5280934e5a05fd6ea",
+    "license": "MIT"
+  },
+  {
+    "repository": "https://github.com/Kiterlin/anti-defensive-writing",
+    "commit": "f516147d017a3fe43ae99192cb89d8261b0c8679",
+    "archive_url": "https://github.com/Kiterlin/anti-defensive-writing/archive/f516147d017a3fe43ae99192cb89d8261b0c8679.zip",
+    "archive_sha256": "c21bede95be8a8f7ead1274ded857cad684fa4435d235755c911cb62ecaf4fd9",
+    "license": "MIT"
+  }
+]
