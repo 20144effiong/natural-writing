@@ -1,6 +1,6 @@
 # Natural Writing
 
-A concise Agent Skill for clear, natural prose that preserves the writer's voice, meaning, and evidence. Use it for conversations, teaching, progress updates, technical documents, and research writing.
+An Agent Skill for clear, natural prose that preserves the writer's voice, meaning, and evidence. Use it for conversations, teaching, progress updates, technical documents, and research writing.
 
 The instructions are in English. Responses follow the language requested by the user, including Chinese.
 
@@ -13,7 +13,7 @@ The instructions are in English. Responses follow the language requested by the 
 - Keeps facts, conditions, attribution, completion status, code, and data intact.
 - Returns finished prose by default, with an editing report only when requested.
 
-The complete workflow contains nine rules in [SKILL.md](SKILL.md). It improves expression without classifying authorship or promising detector results.
+[SKILL.md](SKILL.md) contains nine core writing rules plus detailed revision procedures, technical-writing guidance, research checks, and examples. It improves expression without classifying authorship or promising detector results.
 
 ## Install in Codex
 
@@ -31,7 +31,7 @@ macOS / Linux:
 git clone https://github.com/20144effiong/natural-writing.git ~/.agents/skills/natural-writing
 ```
 
-If the destination already exists, inspect it before making changes. Invoke the skill explicitly with `$natural-writing`. Restart Codex if the skill list has not refreshed.
+If the destination already exists, inspect it before making changes. Invoke the skill explicitly with `$natural-writing`. Refresh the skill list or begin a new session if the update is not yet visible.
 
 To make it the default writing style across local workspaces, add this to `AGENTS.md` in your Codex home directory, replacing the placeholder with the actual installation path:
 
@@ -66,7 +66,40 @@ Adapted from MIT-licensed work by **Siqi Chen** and **Kiterlin**, with the merge
 
 [SOURCES.json](SOURCES.json) records the original repository IDs, owners, pinned commits, and archive checksums. The API links identify the repositories independently of their current names.
 
-The adaptation combines overlapping rules, removes duplicated language versions and lengthy examples, replaces mechanical word bans with contextual judgment, and uses a single final-output workflow. The skill format has been validated locally. No comparative model evaluation has been performed.
+The adaptation retains the natural-writing rules and the full set of distinct revision rules in the pinned Kiterlin source. Repeated Chinese and English versions are consolidated into English instructions, including English explanations of the Chinese-language guidance. The examples are retained with an explicit requirement to verify their facts before using them. Source project names are omitted from the skill's prose. Copyright notices and revision provenance remain in LICENSE and SOURCES.json.
+
+The coverage review compares instructions and examples, not installation scripts, issue templates, or repository artwork. A structural check and targeted editing checks are described below. No comparative model evaluation has been performed.
+
+## Rule coverage
+
+The expanded workflow covers the following distinct rule groups from the pinned source revision in SOURCES.json. This is semantic coverage of the rules, conditions, procedures, and examples, with duplicate language versions consolidated.
+
+| Rule group | Location in SKILL.md |
+| --- | --- |
+| Direct claims and a calm authorial voice | Opening guidance and Core Writing Rules |
+| Accuracy, ethics, law, safety, and methodological limits | Preserve Necessary Precision |
+| Five tests for whether a limitation matters | Preserve Necessary Precision |
+| Placement of limitations and sentence-level exceptions | Preserve Necessary Precision |
+| Ten checks for unnecessary caveats and framing | Revision Checklist |
+| Six-way sentence classification and five-step revision | Rewrite Procedure |
+| Positive scope, precise uncertainty, and paragraph structure | Rewrite Procedure and Writing Principles |
+| Technical purpose, parameters, prerequisites, and missing conditions | Technical Plans and SOPs |
+| Necessary prohibitions, non-interchangeability, and exact operations | Technical Plans and SOPs |
+| Preferred and discouraged sentence patterns | Preferred Patterns and Discouraged Patterns |
+| Five illustrative before-and-after revisions | Examples |
+| Language choice and local editing scope | Opening guidance and Research-Specific Guidance |
+| Main contribution and supporting contributions | Main Argument |
+| Unfavorable metrics and concrete tradeoffs | Metrics and Claims |
+| Four experimental questions and missing ablations | The Role of Each Experiment |
+| Five-step handling of unfavorable results | Procedure for Unfavorable Results |
+| Submission checks and reviewer/manuscript distinctions | Before Submission and Review Comments and Manuscript Text |
+| Chinese modesty and English hedging without inflated claims | Modesty in Chinese-Language Writing and English Patterns |
+| Examples as phrasing guidance, never a source of facts | Examples and Using the Examples |
+| Final output without unnecessary review artifacts | Core Writing Rules and Final Pass |
+
+## Validation
+
+The skill is checked for valid frontmatter, English-only instructions, complete referenced files, and preservation of its nine original core rules. Targeted editing checks exercise numeric tradeoffs, missing ablation evidence, Chinese SOP conditions and prohibitions, observational uncertainty, and prevention of invented facts. These checks are limited examples, not a benchmark or a guarantee of model behavior.
 
 ## License
 
