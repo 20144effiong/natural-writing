@@ -1,0 +1,14 @@
+interface:
+  display_name: Teach Without Gaps
+  short_description: Explain concepts and derivations without skipping key steps
+  default_prompt: Use $teach-without-gaps to explain this clearly, define unfamiliar
+    concepts, and justify each important step.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas

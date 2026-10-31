@@ -1,10 +1,21 @@
 # Natural Writing
 
-An Agent Skill for clear, natural prose that preserves the writer's voice, meaning, and evidence. Use it for conversations, teaching, progress updates, technical documents, and research writing.
+Two complementary Agent Skills for natural prose and connected explanations. Natural Writing preserves the writer's voice, meaning, and evidence. Teach Without Gaps explains concepts and justifies the steps needed to understand an answer.
 
 The instructions are in English. Responses follow the language requested by the user, including Chinese.
 
-## What it does
+## Included skills
+
+| Skill | Entry point | Purpose |
+| --- | --- | --- |
+| Natural Writing | [SKILL.md](SKILL.md) | Clear, natural prose with precise claims and preserved meaning. |
+| Teach Without Gaps | [skills/teach-without-gaps/SKILL.md](skills/teach-without-gaps/SKILL.md) | Explanations, derivations, code walkthroughs, confusion repair, and teaching-material revisions without skipped steps. |
+
+Teach Without Gaps is self-contained. Its defaults cover knowledge questions across conversations, including mathematics, AI, programming, algorithms, and English grammar. It defines unfamiliar concepts before using them, supplies the justification for important transitions, and changes the explanation when a learner remains confused. It also covers slides and handouts: preserve the template, explain sentence transformations and usage conditions, and keep visible slides readable.
+
+The two skills can be used together. The teaching skill retains a Simplified Chinese default for its author's use, while honoring any requested language. Its instructions and interface metadata are in English. Factual lookups and requests for answers only remain brief.
+
+## What Natural Writing does
 
 - Leads with the answer and keeps the reasoning needed to understand it.
 - Removes filler, formulaic phrasing, inflated claims, and repeated caveats.
@@ -43,7 +54,61 @@ Preserve the user's requested language, length, register, format, and task-speci
 
 Existing sessions need to reload their instructions. More specific project instructions can override global defaults. Local installation does not automatically configure ordinary ChatGPT mobile chats or separate cloud environments.
 
-## Example request
+## Install Teach Without Gaps
+
+After cloning this repository using the instructions above, copy the teaching skill into a sibling directory so its entrypoint is at `~/.agents/skills/teach-without-gaps/SKILL.md`. Copy the whole folder, including its interface metadata and icon.
+
+First check that the destination does not already exist. If it does, inspect the existing installation before updating it.
+
+Windows PowerShell:
+
+```powershell
+$teachingSource = "$env:USERPROFILE/.agents/skills/natural-writing/skills/teach-without-gaps"
+$teachingTarget = "$env:USERPROFILE/.agents/skills/teach-without-gaps"
+if (Test-Path $teachingTarget) { throw "Destination already exists. Inspect it before updating." }
+Copy-Item -LiteralPath $teachingSource -Destination $teachingTarget -Recurse
+```
+
+macOS / Linux:
+
+```bash
+teaching_source="$HOME/.agents/skills/natural-writing/skills/teach-without-gaps"
+teaching_target="$HOME/.agents/skills/teach-without-gaps"
+if [ -e "$teaching_target" ]; then
+  echo "Destination already exists. Inspect it before updating."
+else
+  cp -R "$teaching_source" "$teaching_target"
+fi
+```
+
+Invoke it with `$teach-without-gaps` in Codex or select it with an `@` mention in ChatGPT where the skill is installed. The metadata allows automatic matching. A GitHub copy alone does not install the skill into a ChatGPT account.
+
+For a default across local Codex workspaces, add the following to the same global `AGENTS.md`, replacing the placeholder with the actual teaching-skill path:
+
+```text
+Apply teach-without-gaps by default to knowledge questions, explanations, exercises,
+follow-up confusion, and teaching materials in all conversations.
+Read <teaching-skill-installation-directory>/SKILL.md when first applying it in a session.
+Honor the user's requested language, depth, length, and answers-only requests.
+Use it with natural-writing when both apply.
+```
+
+Skill descriptions and local instructions establish defaults. Loading remains host-dependent, and more specific user or project instructions still apply.
+
+## Teaching example requests
+
+```text
+Use $teach-without-gaps to explain why the number of free variables equals
+the dimension of the null space. Explain the missing connection, not just the theorem name.
+```
+
+```text
+Use $teach-without-gaps to revise these English grammar slides.
+Keep the template and explain each sentence transformation, its meaning,
+and the conditions under which the structure is used.
+```
+
+## Natural Writing example request
 
 ```text
 Use $natural-writing to revise the following passage.
@@ -60,7 +125,7 @@ A direct revision is:
 
 Retain sample scope or preliminary status when it affects interpretation. Clearer wording must not make the evidence sound stronger than it is.
 
-## Sources and adaptation
+## Natural Writing sources and adaptation
 
 Adapted from MIT-licensed work by **Siqi Chen** and **Kiterlin**, with the merged adaptation maintained by **20144effiong**.
 
@@ -70,7 +135,7 @@ The adaptation retains the natural-writing rules and the full set of distinct re
 
 The coverage review compares instructions and examples, not installation scripts, issue templates, or repository artwork. A structural check and targeted editing checks are described below. No comparative model evaluation has been performed.
 
-## Rule coverage
+## Natural Writing rule coverage
 
 The expanded workflow covers the following distinct rule groups from the pinned source revision in SOURCES.json. This is semantic coverage of the rules, conditions, procedures, and examples, with duplicate language versions consolidated.
 
@@ -98,6 +163,8 @@ The expanded workflow covers the following distinct rule groups from the pinned 
 | Final output without unnecessary review artifacts | Core Writing Rules and Final Pass |
 
 ## Validation
+
+Teach Without Gaps passed frontmatter validation and targeted checks using vector-space dimension, the free-variable basis argument, array bounds, and an answers-only vocabulary request. Its cross-conversation and teaching-material defaults are explicit in its entrypoint. These checks are limited examples, not a benchmark.
 
 The skill is checked for valid frontmatter, English-only instructions, complete referenced files, and preservation of its nine original core rules. Targeted editing checks exercise numeric tradeoffs, missing ablation evidence, Chinese SOP conditions and prohibitions, observational uncertainty, and prevention of invented facts. These checks are limited examples, not a benchmark or a guarantee of model behavior.
 
