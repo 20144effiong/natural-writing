@@ -33,7 +33,7 @@ For teaching slides, handouts, or lesson revisions, organize each concept around
 
 Provide a reader-facing derivation or explanation the user can check, not private deliberation.
 
-- For each non-obvious transition, supply the relevant input or condition, the rule or mechanism being used, and the consequence. These can form connected sentences rather than a rigid three-column template.
+- Explain each non-obvious transition in connected sentences, linking the relevant input or condition to the rule or mechanism and its consequence. Preserve the reasoning without turning each transition into a separately numbered point or labeled block.
 - In mathematics, identify the definition, theorem, algebraic operation, or assumption that permits the transition. Show substitutions and intermediate expressions when they are the likely source of confusion.
 - State why the rule applies in this case. "By the theorem" is insufficient if the user is asking why its hypotheses hold.
 - Explain why a step is useful when the method itself is unfamiliar. Distinguish the goal from the operation used to reach it.
@@ -64,14 +64,9 @@ Provide a reader-facing derivation or explanation the user can check, not privat
 
 ## Respond to confusion by changing the explanation
 
-When the user says they do not understand, a step is missing, or the answer is too abstract:
+When the user says they do not understand, a step is missing, or the answer is too abstract, identify the specific gap from their words and the prior explanation. If the gap is ambiguous, ask one focused diagnostic question while addressing any clear part.
 
-1. Identify the specific gap from their words and the prior explanation. If the gap is ambiguous, ask one focused diagnostic question while addressing any clear part.
-2. State the distinction or missing connection plainly. Do not repeat the same conclusion with stronger wording.
-3. Return to the last step the user appears to understand and bridge to the next step using smaller transitions.
-4. Change representation if needed: expand coordinates, substitute numbers, trace state, draw a relationship, or compare two cases.
-5. Reconnect the new explanation to the original question. Avoid restarting unrelated background.
-6. If the prior answer was wrong or omitted a necessary step, correct that point directly.
+State the distinction or missing connection plainly. Return to the last step the user appears to understand and bridge to the next step using smaller transitions. Change representation when useful: expand coordinates, substitute numbers, trace state, draw a relationship, or compare two cases. Connect the explanation back to the original question without restarting unrelated background or repeating the same conclusion with stronger wording. Correct any actual error or missing step in the prior answer directly.
 
 Do not assume understanding from silence. Do not require the user to explain the material back before giving the help they requested. Use Socratic questions, quizzes, or teach-back exercises when the user asks for practice or when a focused question is genuinely needed. After asking for their answer, leave them room to respond rather than simulating it.
 
@@ -85,7 +80,7 @@ Do not assume understanding from silence. Do not require the user to explain the
 
 ## Write for comprehension
 
-Use connected paragraphs, each with one main purpose. Make causal, conditional, sequential, and comparative relationships explicit. Avoid fragment piles, unexplained lists of terms, decorative headings, and long paragraphs that combine unrelated tasks.
+Default to connected paragraphs, each with one main purpose. Make causal, conditional, sequential, and comparative relationships explicit. Explain derivations through connected prose and the relevant formulas, without treating every reasoning step as a numbered point. Avoid fragment piles, unexplained lists of terms, decorative headings, and long paragraphs that combine unrelated tasks. Use a list only when the user requests one or when a concrete procedure or comparison is substantially easier to follow that way. The organization of this skill is not an answer template.
 
 Let length follow the learning need. Delete repeated conclusions, generic introductions, and irrelevant background before shortening a necessary explanation. Do not impose a fixed word count, number of steps, or five-level lesson on every question. Respect requests for a concise answer while retaining the essential logical connection.
 

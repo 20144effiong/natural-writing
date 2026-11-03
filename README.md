@@ -15,6 +15,8 @@ Teach Without Gaps is self-contained. Its defaults cover knowledge questions acr
 
 The two skills can be used together. The teaching skill retains a Simplified Chinese default for its author's use, while honoring any requested language. Its instructions and interface metadata are in English. Factual lookups and requests for answers only remain brief.
 
+Both skills default to connected paragraphs. Their internal rules are not response templates. Lists are reserved for explicit requests or concrete procedures and comparisons that are substantially easier to follow in that format. Teaching still preserves necessary reasoning and derivations.
+
 ## What Natural Writing does
 
 - Leads with the answer and keeps the reasoning needed to understand it.
@@ -146,7 +148,7 @@ The expanded workflow covers the following distinct rule groups from the pinned 
 | Five tests for whether a limitation matters | Preserve Necessary Precision |
 | Placement of limitations and sentence-level exceptions | Preserve Necessary Precision |
 | Ten checks for unnecessary caveats and framing | Revision Checklist |
-| Six-way sentence classification and five-step revision | Rewrite Procedure |
+| Sentence functions and revision guidance | Rewrite Procedure |
 | Positive scope, precise uncertainty, and paragraph structure | Rewrite Procedure and Writing Principles |
 | Technical purpose, parameters, prerequisites, and missing conditions | Technical Plans and SOPs |
 | Necessary prohibitions, non-interchangeability, and exact operations | Technical Plans and SOPs |
@@ -156,7 +158,7 @@ The expanded workflow covers the following distinct rule groups from the pinned 
 | Main contribution and supporting contributions | Main Argument |
 | Unfavorable metrics and concrete tradeoffs | Metrics and Claims |
 | Four experimental questions and missing ablations | The Role of Each Experiment |
-| Five-step handling of unfavorable results | Procedure for Unfavorable Results |
+| Handling unfavorable results | Procedure for Unfavorable Results |
 | Submission checks and reviewer/manuscript distinctions | Before Submission and Review Comments and Manuscript Text |
 | Chinese modesty and English hedging without inflated claims | Modesty in Chinese-Language Writing and English Patterns |
 | Examples as phrasing guidance, never a source of facts | Examples and Using the Examples |
